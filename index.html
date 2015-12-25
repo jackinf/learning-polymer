@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Polymer</title>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html" />
+    <link rel="import" href="hello-polymer.html" />
+    <link rel="import" href="business-card.html" />
+    <link rel="import" href="my-card.html" />
+    <link rel="import" href="my-button.html" />
+    <link rel="import" href="prop-element.html" />
+    <link rel="import" href="parent-element.html" />
+    <link rel="import" href="observer-element.html" />
+    <link rel="import" href="listener-element.html" />
+    <link rel="import" href="my-range.html" />
+    <link rel="import" href="cart-list.html" />
+
+</head>
+<body>
+    <hello-polymer id="h" name="Joe"></hello-polymer>
+    <business-card></business-card>
+    <my-card></my-card>
+
+<button is="my-button">Button1</button>
+<button>Button2</button>
+
+<prop-element name="Jack Jones" position="Dancer"></prop-element>
+<prop-element name="Ben"></prop-element>
+<parent-element></parent-element>
+
+Observer:
+<observer-element></observer-element>
+
+Listener:
+<listener-element></listener-element>
+
+Range:
+<my-range value="10"></my-range>
+
+    <script>
+        document.querySelector('my-range').addEventListener('valueChanged',
+            function (e) {
+                console.log(e.detail.increased);
+            }
+        )
+    </script>
+
+Cart list:
+<cart-list></cart-list>
+</body>
+</html>
